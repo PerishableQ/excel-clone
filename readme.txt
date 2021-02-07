@@ -6,12 +6,15 @@ What technologies I hope to learn from this project:
         Babel
         HTML, SCSS, JS 
         Eslint
-        Plugins and loaders
+        Plugins and loaders:
             Used plugins:
                 -HtmlWebpackPlugin
                 -CopyWebpackPlugin
                 -CleanWebpackPlugin
                 -MinCssExtractPlugin
+            Used loaders:
+                -SASS loader
+                -CSS loader
         and 2 working mods:
             Development:
                 DevServer, Source maps, Eslint
