@@ -2,9 +2,9 @@ An online simplified Excel clone made with vanilla javascript.
 
 What technologies I hope to learn from this project:
 
-    Webpack
+        Webpack
         Babel
-        HTML, JS, SCSS
+        HTML, SCSS, JS 
         Eslint
         Plugins and loaders
         and 2 working mods:
