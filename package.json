@@ -1,0 +1,26 @@
+{
+  "name": "excel-clone-try2",
+  "version": "1.0.0",
+  "description": "This will be simple online excel clone",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PerishableQ/excel-clone-try2.git"
+  },
+  "keywords": [
+    "excel",
+    "webpack",
+    "vanilla",
+    "js",
+    "javascript"
+  ],
+  "author": "PerishableQ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PerishableQ/excel-clone-try2/issues"
+  },
+  "homepage": "https://github.com/PerishableQ/excel-clone-try2#readme"
+}
