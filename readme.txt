@@ -3,7 +3,6 @@ An online simplified Excel clone made with vanilla javascript.
 What technologies I hope to learn from this project:
 
         Webpack
-        Babel
         HTML, SCSS, JS 
         Eslint
         Plugins and loaders:
@@ -15,6 +14,7 @@ What technologies I hope to learn from this project:
             Used loaders:
                 -SASS loader
                 -CSS loader
+                -Babel
         and 2 working mods:
             Development:
                 DevServer, Source maps, Eslint
