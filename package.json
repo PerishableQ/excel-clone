@@ -4,7 +4,9 @@
   "description": "This will be simple online excel clone",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "start": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -22,5 +24,13 @@
   "bugs": {
     "url": "https://github.com/PerishableQ/excel-clone-try2/issues"
   },
-  "homepage": "https://github.com/PerishableQ/excel-clone-try2#readme"
+  "homepage": "https://github.com/PerishableQ/excel-clone-try2#readme",
+  "private": true,
+  "devDependencies": {
+    "webpack": "^5.21.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^3.11.2"
+  }
 }
