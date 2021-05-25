@@ -4,7 +4,6 @@
   "description": "This will be simple online excel clone",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "start": "cross-env NODE_ENV=development webpack serve"
   },
@@ -15,7 +14,7 @@
   "keywords": [
     "excel",
     "webpack",
-    "vanilla",
+    "vanilla js",
     "js",
     "javascript"
   ],
@@ -29,6 +28,7 @@
   "browserslist": ">0.25%, not dead",
   "devDependencies": {
     "@babel/core": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
     "@babel/preset-env": "^7.12.13",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
