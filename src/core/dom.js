@@ -1,12 +1,13 @@
+// create new Dom element
 class Dom {
     constructor(selector) {
         // #app
-        /* this.$el = typeof selector === 'string' ?
+        this.$el = typeof selector === 'string' ?
             document.querySelector(selector) :
-            selector; */
+            selector;
     }
 
-    /* html(html) {
+    html(html) {
         if (typeof html === 'string') {
             this.$el.innerHTML = html;
             return this;
@@ -17,19 +18,19 @@ class Dom {
     clear() {
         this.html('');
         return this;
-    } */
+    }
 
     append(node) {
-        if (Element.prototype.append) {
-            this.$el.append(node);
-        } else {
-            this.$el.appendChild(node);
+        if (node instanceof Dom) {
+            node = node.$el;
         }
+
+        this.$el.append(node);
     }
 }
 
-export function $() {
-    return new Dom();
+export function $(selector) {
+    return new Dom(selector);
 }
 
 $.create = (tagname, classes = '') => {
@@ -38,5 +39,5 @@ $.create = (tagname, classes = '') => {
         el.classList.add(classes);
     }
 
-    return el;
+    return $(el);
 };

@@ -3,7 +3,7 @@ import {$} from '@/core/dom.js';
 
 export class Excel {
     constructor(selector, options) {
-        this.$el = document.querySelector(selector);
+        this.$el = $(selector);
         this.components = options.components || [];
     }
 
@@ -13,17 +13,17 @@ export class Excel {
 
         // looping over each class in index.js components array
         this.components.forEach((Component) => {
-            // creating node el with each excel.html div element
             const $el = $.create('div', Component.className);
 
             // adding created node el to our Header, Formula... etc.
             // respectively on the array
             const component = new Component($el);
 
-            debugger;
-            $el.innerHTML = component.toHTML();
+            $el.html(component.toHTML());/* no innerHTML on debugger..
+            idk why that is so*/
             $root.append($el);
         });
+
         return $root;
     }
 
