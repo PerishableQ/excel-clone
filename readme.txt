@@ -2,6 +2,8 @@ An online simplified Excel clone made with vanilla javascript.
 
 What technologies I hope to learn from this project:
 
+        Object Oriented Programming
+
         Webpack
         HTML, SCSS, JS 
         Eslint
