@@ -15,6 +15,14 @@ class Dom {
         return this.$el.outerHTML.trim();
     }
 
+    on(eventName, callback) {
+        this.$el.addEventListener(eventName, callback);
+    }
+
+    off(eventName, callback) {
+        this.$el.removeEventListener(eventName, callback);
+    }
+
     clear() {
         this.html('');
         return this;
@@ -25,7 +33,13 @@ class Dom {
             node = node.$el;
         }
 
-        this.$el.append(node);
+        if (Element.prototype.append) {
+            this.$el.append(node);
+        } else {
+            this.$el.appendChild(node);
+        }
+
+        return this;
     }
 }
 

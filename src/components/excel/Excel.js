@@ -12,7 +12,7 @@ export class Excel {
         const $root = $.create('div', 'excel');
 
         // looping over each class in index.js components array
-        this.components.forEach((Component) => {
+        this.components = this.components.map((Component) => {
             const $el = $.create('div', Component.className);
 
             // adding created node el to our Header, Formula... etc.
@@ -22,6 +22,7 @@ export class Excel {
             $el.html(component.toHTML());/* no innerHTML on debugger..
             idk why that is so*/
             $root.append($el);
+            return component;
         });
 
         return $root;
@@ -30,5 +31,6 @@ export class Excel {
     // render element on the page
     render() {
         this.$el.append(this.getRoot());
+        this.components.forEach((component) => component.init());
     }
 }
