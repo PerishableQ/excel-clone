@@ -4,20 +4,31 @@ const CODES = { // A-Z alphabet characters
 };
 
 function createRow(data, info) {
+    const resize = info ?
+        `<div class="row-resize" data-resize="row"></div>` :
+        '';
     return `
-        <div class="row">
-            <div class="row-info">${info ?? ''}</div>
-            <div class="row-data">${data}</div>
+        <div class="row" data-type="resizable">
+            <div class="row-info">
+                ${info ?? ''}
+                ${resize}
+            </div>
+            <div class="row-data">
+                ${data}
+            </div>
         </div>
     `;
 }
 
-function toColumn(column) {
-    return `<div class="column">${column}</div>`;
+function toColumn(column, index) {
+    return `<div class="column" data-type="resizable" data-col="${index}">
+                ${column}
+                <div class="col-resize" data-resize="col"></div>
+            </div>`;
 }
 
-function toCell() {
-    return `<div class="cell" contenteditable=""></div>`;
+function toCell(_, column) {
+    return `<div class="cell" contenteditable="" data-col="${column}"></div>`;
 }
 
 function toCharacter(_, ind) {
