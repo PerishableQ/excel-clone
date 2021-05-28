@@ -27,8 +27,11 @@ function toColumn(column, index) {
             </div>`;
 }
 
-function toCell(_, column) {
-    return `<div class="cell" contenteditable="" data-col="${column}"></div>`;
+function toCell(row, column) {
+    return `<div class="cell" contenteditable="" 
+    data-col="${column}" 
+    data-type="cell"
+    data-id="${row}:${column}"></div>`;
 }
 
 function toCharacter(_, ind) {
@@ -47,12 +50,12 @@ export function createTable(rowsCount = 20) {
 
     rows.push(createRow(cols));
 
-    for (let i = 0; i < rowsCount; i++) {
+    for (let row = 0; row < rowsCount; row++) {
         const cells = new Array(colsCount)
             .fill('')
-            .map(toCell)
+            .map((_, col) => toCell(row, col))
             .join('');
-        rows.push(createRow(cells, i + 1));
+        rows.push(createRow(cells, row + 1));
     }
 
     return rows.join('');
